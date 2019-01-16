@@ -1,3 +1,15 @@
+/* global styling */
+.text-center {
+    text-align: center;
+}
+.title {
+    margin: 5% 0;
+}
+.container-fluid {
+    
+}
+/* end global */
+
 nav .nav-wrapper {
     background-color: rgb(90, 204, 194);
     padding-left: 1%;
@@ -22,6 +34,8 @@ header {
     background-image: url('../img/header.jpg');
     background-attachment: fixed;
     background-size: cover;
+    width: 100vw !important;
+
 }
 
 header .text {
@@ -37,4 +51,26 @@ header .overlay {
     top:0;
     opacity: .6;
     z-index: -1;
+}
+
+/* promo */
+.tours{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.tours img {
+    max-width: 100%;
+    max-height: 300px;
+    transition: transform .2s;
+    border-radius: 5%;
+}
+
+.tours img:hover {
+    transform: scale(1.03);
+}
+
+.tours p, small {
+    margin: 0;
 }
