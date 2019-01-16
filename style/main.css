@@ -1,0 +1,8 @@
+nav .nav-wrapper {
+    background-color: #50B4AB;
+    padding-left: 1%;
+}
+
+nav .nav-wrapper a{
+    color: rgb(41, 36, 36);
+}
