@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+}
+/* global styling */
+.text-center {
+    text-align: center;
+}
+.title {
+    margin: 5% 0;
+}
+.container-fluid {
+    
+}
+/* end global */
+
+/* start nav */
+nav .nav-wrapper {
+    background-color: #109091;
+    padding-left: 1%;
+    margin: 0;
+}
+
+nav .nav-wrapper a{
+    font-family: 'Roboto', sans-serif !important;
+    color: white;
+    font-weight: 600;
+}
+
+/* end nav */
+
+/* start header */
+header {
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    padding: 5% 0;
+    height: 50vh;
+    
+    display: grid;
+    text-align: center;
+    
+    background-image: url('../img/header2.jpg');
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: top;
+}
+
+header .text {
+    color: aliceblue;
+    font-weight: thin !important;
+}
+header .text h1 {
+    font-weight: bold;
+    font-size: 300%;
+}
+header .text h3 {
+    font-size: 200%;
+}
+header .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    top:0;
+    opacity: .6;
+    z-index: -1;
+}
+
+header form input {
+    width: 50vw !important;
+    border: 1px solid grey;
+    background: white !important;
+}
