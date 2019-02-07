@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700,900');
 @import 'menu.css';
+@import 'header.css';
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    border: 1px solid #AAAAAA;
+    background: white;
+    padding: 6px 46px;
 }

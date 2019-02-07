@@ -67,40 +67,82 @@
             <v-layout wrap style="height: 100%;" @click="drawer=!drawer">
                 <v-navigation-drawer v-model="drawer" absolute temporary >
 
-                        <v-list class="pa-1">
-                                <v-list-tile avatar>
-                                  <v-list-tile-avatar>
-                                    <img src="img/favicon.png">
-                                  </v-list-tile-avatar>
-                        
-                                  <v-list-tile-content>
-                                    <v-list-tile-title>IMT</v-list-tile-title>
-                                  </v-list-tile-content>
-                                </v-list-tile>
-                              </v-list>
-                        
-                              <v-list class="pt-0" dense>
-                                <v-divider></v-divider>
-
-
-                <v-list class="pt-0" dense>
+                    <v-list class="pa-1">
+                            <v-list-tile avatar>
+                                <v-list-tile-avatar>
+                                <img src="img/favicon.png">
+                                </v-list-tile-avatar>
+                    
+                                <v-list-tile-content>
+                                <v-list-tile-title>IMT</v-list-tile-title>
+                                </v-list-tile-content>
+                            </v-list-tile>
+                            </v-list>
+                            <v-list class="pt-0" dense>
                     <v-divider></v-divider>
-            
-                    <v-list-tile
-                    v-for="item in sideLinks" :key="item.title" @click="drawer=false" >
-                    <v-list-tile-action>
-                        <v-icon>{{ item.icon }}</v-icon>
-                    </v-list-tile-action>
 
-                    <v-list-tile-content>
-                        <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                    </v-list-tile-content>
-                    </v-list-tile>
-                </v-list>
+                    <v-list class="pt-0" dense>
+                        <v-divider></v-divider>
+                
+                        <v-list-tile
+                        v-for="item in sideLinks" :key="item.title" @click="drawer=false" >
+                        <v-list-tile-action>
+                            <v-icon>{{ item.icon }}</v-icon>
+                        </v-list-tile-action>
+
+                        <v-list-tile-content>
+                            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                        </v-list-tile-content>
+                        </v-list-tile>
+                    </v-list>
                 </v-navigation-drawer>
             </v-layout>
         </template>
         <!-- end side nav -->
+
+        <!-- start header -->
+        <template>
+        
+            <header>
+                    <div class="content">
+                        <div>
+                            <h1 class="display-3">InMyTours</h1>
+                            <h4 class="display-1">Your way to discover a new world.</h4>
+                        </div>
+                    </div>
+                    <div class="header-bottom">
+                        <form action="" method="GET" class="row">
+
+                                <div>
+                                    <span class="white--text hidden-sm-and-down ">Pick a: </span>
+                                    <select name="country ">
+                                        <option value="0" disabled selected>Coyntry</option>
+                                        <option value="1">Morocco</option>
+                                        <option value="2">Spain</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <span class="white--text hidden-sm-and-down">Pick a: </span>
+                                    <select name="city">
+                                        <option value="0" disabled selected>City</option>
+                                        <option value="1">Morocco</option>
+                                        <option value="2">Spain</option>
+                                    </select>
+                                </div>
+
+                                <div class="text-xs-center">
+                                    <v-btn fab dark small color="#009CCE" type="submit">
+                                        <v-icon dark>search</v-icon>
+                                    </v-btn>
+                                </div>
+
+                        </form>
+                    </div>
+            </header>
+            
+        </template>
+        <!-- end header -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
