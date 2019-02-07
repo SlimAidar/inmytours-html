@@ -2,12 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="app">
+        <!-- start nav bar -->
+        <template>
+            <v-toolbar dark color="#009CCE" flat>
+              <v-toolbar-side-icon 
+              @click="drawer=!drawer"
+              class="hidden-md-and-up"></v-toolbar-side-icon>
+              <v-toolbar-title data-app>IMT</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-toolbar-items class="hidden-sm-and-down">
+                <v-menu>
+                    <v-btn slot="activator" dark icon>
+                      <v-icon>language</v-icon>
+                    </v-btn>
+        
+                    <v-list>
+                      <v-list-tile v-for="(item, i) in languages" :key="i" >
+                        <v-list-tile-title>
+                            <a href="#" class="sub-menu-link">{{ item.title }}</a>
+                        </v-list-tile-title>
+                      </v-list-tile>
+                    </v-list>
+                </v-menu>
+                <v-menu>
+                    <v-btn slot="activator" dark icon>
+                      <v-icon>attach_money</v-icon>
+                    </v-btn>
+        
+                    <v-list>
+                      <v-list-tile v-for="(item, i) in currencies" :key="i" >
+                        <v-list-tile-title>
+                            <a href="#" class="sub-menu-link">{{ item.title }}</a>
+                        </v-list-tile-title>
+                      </v-list-tile>
+                    </v-list>
+                </v-menu>
+                <v-btn flat>
+                    <a href="#" class="menu-link">Sign in</a>
+                </v-btn>
+                <v-btn flat>
+                    <a href="#" class="menu-link">
+                        <v-icon>help_outline</v-icon>
+                    </a>
+                </v-btn>
+              </v-toolbar-items>
+            </v-toolbar>
+        </template>
+        <!-- end navbar -->
+
+        <!-- side nav -->
+        <template>
+            <v-layout wrap style="height: 100%;" @click="drawer=!drawer">
+                <v-navigation-drawer v-model="drawer" absolute temporary >
+
+                        <v-list class="pa-1">
+                                <v-list-tile avatar>
+                                  <v-list-tile-avatar>
+                                    <img src="img/favicon.png">
+                                  </v-list-tile-avatar>
+                        
+                                  <v-list-tile-content>
+                                    <v-list-tile-title>IMT</v-list-tile-title>
+                                  </v-list-tile-content>
+                                </v-list-tile>
+                              </v-list>
+                        
+                              <v-list class="pt-0" dense>
+                                <v-divider></v-divider>
+
+
+                <v-list class="pt-0" dense>
+                    <v-divider></v-divider>
+            
+                    <v-list-tile
+                    v-for="item in sideLinks" :key="item.title" @click="drawer=false" >
+                    <v-list-tile-action>
+                        <v-icon>{{ item.icon }}</v-icon>
+                    </v-list-tile-action>
+
+                    <v-list-tile-content>
+                        <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                    </v-list-tile-content>
+                    </v-list-tile>
+                </v-list>
+                </v-navigation-drawer>
+            </v-layout>
+        </template>
+        <!-- end side nav -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
