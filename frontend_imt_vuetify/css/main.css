@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,500,700,900');
 @import 'menu.css';
-@import 'header.css';
+@import 'home.css';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -15,3 +15,58 @@ select {
     background: white;
     padding: 6px 46px;
 }
+
+nav {
+    z-index: 2
+}
+
+/* start menu */
+.menu-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: white
+}
+
+.sub-menu-link {
+    text-decoration: none;
+    color: black
+}
+/* end menu */
+
+/* start header */
+header {
+    background-image: url("../img/header.jpg"), linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    height: 65vh;
+    position: relative;
+}
+
+header .content {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    color: white;
+    font-weight: bold !important;
+}
+
+header .header-bottom{
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+header span {
+    font-size: 24px;
+}
+/* end header */
+
+@media screen and (min-width: 480px) {
+    .in-form {
+        padding-top: 20px
+    }
+  }

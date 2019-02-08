@@ -1,0 +1,72 @@
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(188px, 200px));
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.destination {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 5%;
+    transition: .3s all;
+}
+
+.destination img {
+    width: 100%;
+    height: 20%;
+}
+
+.destination .destination-title {
+    padding: 5% !important;
+}
+
+.destination:hover {
+    box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    font-size: 1.em !important;
+    font-weight: 400;
+}
+
+/* toours */
+.tours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 325px));
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.tour {
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: .3s all;
+}
+
+.tour img{
+    width: 100%;
+}
+
+.tour .icons {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+}
+.tour .v-icon {
+    width: 15px;
+}
+
+.tour .tour-title {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.tour .price {
+    font-size: 1.5em
+}
+
+.tours .tour:hover {
+    box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+}

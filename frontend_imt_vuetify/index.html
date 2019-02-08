@@ -102,7 +102,6 @@
 
         <!-- start header -->
         <template>
-        
             <header>
                     <div class="content">
                         <div>
@@ -113,36 +112,111 @@
                     <div class="header-bottom">
                         <form action="" method="GET" class="row">
 
-                                <div>
+                            <v-layout row wrap >
+                                <v-flex xs8 md8 class="text-md-right in-form">
                                     <span class="white--text hidden-sm-and-down ">Pick a: </span>
-                                    <select name="country ">
-                                        <option value="0" disabled selected>Coyntry</option>
+                                    <select name="country" class="my-2">
+                                        <option value="0" disabled selected>
+                                            Coyntry
+                                        </option>
                                         <option value="1">Morocco</option>
                                         <option value="2">Spain</option>
                                     </select>
-                                </div>
 
-                                <div>
                                     <span class="white--text hidden-sm-and-down">Pick a: </span>
-                                    <select name="city">
+                                    <select name="city" class="my-2">
                                         <option value="0" disabled selected>City</option>
                                         <option value="1">Morocco</option>
                                         <option value="2">Spain</option>
                                     </select>
-                                </div>
+                                </v-flex>
 
-                                <div class="text-xs-center">
-                                    <v-btn fab dark small color="#009CCE" type="submit">
+                                <v-flex xs3 md4 class="text-xs-center text-md-left">
+                                    <v-btn fab dark small 
+                                    color="#009CCE" 
+                                    type="submit"
+                                    class="my-4">
                                         <v-icon dark>search</v-icon>
                                     </v-btn>
-                                </div>
+                                </v-flex>
+                            </v-layout>
 
                         </form>
                     </div>
             </header>
-            
         </template>
         <!-- end header -->
+
+        <div class="container">
+
+            <h2 class="text-xs-center mt-3 title">Popular destinations</h2>
+            <!-- start main -->
+            <section class="destinations mt-3">
+                <article class="destination">
+                    <img src="img/destinations/paris.jpg" alt="">
+                    <div class="destination-title">
+                        <span>Paris</span>
+                    </div>
+                </article>
+                <article class="destination">
+                     <img src="img/destinations/paris.jpg" alt="">
+                     <div class="destination-title">
+                        <span>Paris</span>
+                    </div>
+                </article>
+                <article class="destination">
+                    <img src="img/destinations/paris.jpg" alt="">
+                    <div class="destination-title">
+                        <span>Paris</span>
+                    </div>
+                </article>
+                <article class="destination">
+                    <img src="img/destinations/paris.jpg" alt="">
+                    <div class="destination-title">
+                        <span>Paris</span>
+                    </div>
+                </article>
+            </section>
+            <!-- end main -->
+
+            <!-- start popular tours -->
+            <h2 class="text-xs-center mt-3 title">Popular tours</h2>
+            <section class="tours mt-3">
+                <article class="tour">
+                    <img src="img/tours/enjoy.jpg" alt="">
+                    <v-layout row wrap class="pa-2">
+                        <v-flex xs8 >
+                            <span class="tour-title">
+                                Barcelona city tour
+                            </span>
+                        </v-flex>
+                        <v-flex xs4 class="text-xs-right mt-1">
+                            <v-icon small>location_on</v-icon>
+                            <small>Barcelona</small>
+                        </v-flex>
+                        <v-flex xs12 py-4>
+                            <span class="text--lighten-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo similique non iste ad.
+                            </span>
+                        </v-flex>
+                        <v-flex xs4 class="icons">
+                            <v-icon small color='#F2C94C'>star_rate</v-icon>
+                            <v-icon small color='#F2C94C'>star_rate</v-icon>
+                            <v-icon small color='#F2C94C'>star_rate</v-icon>
+                            <v-icon small color='#F2C94C'>star_rate</v-icon>
+                            <v-icon small color='#F2C94C'>star_rate</v-icon>
+                        </v-flex>
+                        <v-flex xs4>
+                            120 review(s)
+                        </v-flex>
+                        <v-flex xs4 class="text-xs-right">
+                            <span class="price">35 $</span>
+                        </v-flex>
+                    </v-layout>
+                </article>
+            </section>
+            
+        </div> <!-- end container -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
